@@ -163,7 +163,9 @@ export class PrismaRepository extends ModelRepository {
         select: { name: true },
       });
 
-      const modelExists = allModels.find((m) => m.name === model.name);
+      const modelExists = allModels.find(
+        (m: { name: string | null }) => m.name === model.name,
+      );
 
       if (modelExists) {
         throw new DuplicateEntryError(`${model.name}`);
