@@ -13,8 +13,8 @@ This is a Node.js project designed to provide a scalable and efficient solution 
 ## Installation
 ```sh
 # Clone the repository
-git clone https://github.com/angel-sm/pillar-screen-test-backend.git
-cd pillar-screen-test-backend
+git clone https://github.com/angel-sm/nexu-challange.git
+cd nexu-challange
 
 # Install dependencies
 npm install
