@@ -30,13 +30,12 @@ export class PrismaRepository extends ModelRepository {
         return [];
       }
 
-      return brands.map((brand) => ({
+      return brands.map((brand: any) => ({
         id: brand.id,
-        name: brand.brand_name,
-        average_price: brand.average_price,
+        name: brand.brand_name ?? '',
+        average_price: brand.average_price ?? '',
       })) as Omit<PrimitiveModel, 'brand_name'>[];
     } catch (error) {
-      console.log('🚀 ~ PrismaRepository ~ getBrands ~ error:', error);
       throw new DatabaseUnexpectedError();
     }
   }
