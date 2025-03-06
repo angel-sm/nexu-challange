@@ -1,0 +1,11 @@
+services:
+  app:
+    build: .
+    ports:
+      - '5000:${SERVER_PORT}'
+    environment:
+      - SERVER_PORT=${SERVER_PORT}
+      - NODE_ENV=production
+      - DATABASE_URL=${DATABASE_URL}
+    env_file:
+      - .env

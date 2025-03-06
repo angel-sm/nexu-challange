@@ -1,0 +1,4 @@
+-- AlterTable
+ALTER TABLE "Model" ALTER COLUMN "name" DROP NOT NULL,
+ALTER COLUMN "average_price" DROP NOT NULL,
+ALTER COLUMN "brand_name" DROP NOT NULL;
