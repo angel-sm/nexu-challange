@@ -27,7 +27,7 @@ export class PrismaRepository extends ModelRepository {
       });
 
       if (!brands) {
-        return []
+        return [];
       }
 
       return brands.map((brand) => ({
@@ -36,7 +36,7 @@ export class PrismaRepository extends ModelRepository {
         average_price: brand.average_price,
       })) as Omit<PrimitiveModel, 'brand_name'>[];
     } catch (error) {
-      console.log("🚀 ~ PrismaRepository ~ getBrands ~ error:", error)
+      console.log('🚀 ~ PrismaRepository ~ getBrands ~ error:', error);
       throw new DatabaseUnexpectedError();
     }
   }
@@ -55,7 +55,14 @@ export class PrismaRepository extends ModelRepository {
           name: true,
           average_price: true,
         },
-      } as { where?: {}; select: any };
+      } as {
+        where?: {};
+        select: {
+          id: boolean;
+          name: boolean;
+          average_price: boolean;
+        };
+      };
 
       if (filters.greater) {
         where['average_price'] = {
