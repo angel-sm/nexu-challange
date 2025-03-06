@@ -10,6 +10,10 @@ This is a Node.js project designed to provide a scalable and efficient solution 
 - [API Reference](#api-reference)
 - [Scripts](#scripts)
 
+## Deployment 
+Services deployed in next link [https://nexu-challange.onrender.com](https://nexu-challange.onrender.com)
+Im using Render service to deploy in free tier, this means if the service not response inmediatly is beacuase the instance is off, just wait a few menuts (2 or 3 minuts) and try again to get response from any service
+
 ## Installation
 ```sh
 # Clone the repository
